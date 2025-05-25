@@ -1,6 +1,6 @@
 const { useMultiFileAuthState, makeWASocket } = require('@whiskeysockets/baileys');
 
-async function connectToWhatsApp() {
+async function main() {
     // Configuração de autenticação (os tokens serão armazenados em arquivos)
     const { state, saveCreds } = await useMultiFileAuthState('auth_info_baileys');
 
@@ -31,4 +31,4 @@ async function connectToWhatsApp() {
     });
 }
 
-connectToWhatsApp().catch(err => console.log(err));
+main().catch(err => console.log(err));
