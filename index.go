@@ -11,7 +11,7 @@ go func() {
     //show qr code or save it somewhere to scan
 }()
 sess, err := wac.Login(qrChan)
-
+newSess, err := wac.RestoreWithSession(sess)
 
 
 text := whatsapp.TextMessage{
